@@ -1,8 +1,13 @@
+import LeftField from "src/components/LeftField"
+import RightField from "src/components/RightField"
+import * as Styled from 'src/app/styles'
+
 const App = () => {
   return (
-    <>
-      <h1>Hello</h1>
-    </>
+    <Styled.HomeContainer>
+      <LeftField />
+      <RightField />
+    </Styled.HomeContainer>
   )
 }
 
