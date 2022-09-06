@@ -49,12 +49,13 @@ export const Input = styled.input.attrs({
 
 export const Button = styled.button`
   width: 356px;
-  height: 40px;
+  height: 45px;
   background-color: #2ea44f;
   color: #ffffff;
   border-radius: 5px;
   border: none;
   font-weight: bold;
+  font-size: 18px;
   margin-top: 45px;
   &:hover{
     background-color: #236130; 
