@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client';
+import App from 'src/app'
 
-import './index.css'
+import 'src/index.css'
 
 const root = createRoot(document.getElementById('root') as HTMLElement);
-root.render(<h1>Yeeeeees!</h1>);
+root.render(<App />);
