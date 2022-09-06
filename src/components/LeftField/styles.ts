@@ -9,4 +9,54 @@ export const LeftFieldContainer = styled.div`
   background-color: rgba(17, 25, 40, 0.6);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  text-align: center;
+`
+
+export const HeaderText = styled.h2`
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+  color: #ffffff;
+  line-height: 2;
+  font-size: 30px;
+`
+
+export const Input = styled.input.attrs({
+  type: "number"
+})`
+  width: 350px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #1f2a37;
+  border: 1px solid #4b5663;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 30px;
+  &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &:focus{
+    border: 1px solid red;
+  };
+  &:active{
+    border: 1px solid red;
+  }
+`
+
+export const Button = styled.button`
+  width: 356px;
+  height: 40px;
+  background-color: #2ea44f;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  margin-top: 45px;
+  &:hover{
+    background-color: #236130; 
+  }
 `
