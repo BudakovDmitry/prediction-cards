@@ -7,7 +7,7 @@ export const Card = styled.div`
   border-radius: 15px;
   margin: 0 auto;
   margin-top: 50px;
-  padding: 10px;
+  padding: 5px 10px;
   text-align: center;
 `
 
@@ -28,4 +28,13 @@ export const Button = styled.button.attrs({
   &:hover{
     background-color: #236130; 
   }
+`
+
+export const CardNumber = styled.h3`
+  font-size: 18px;
+  font-weight: bold;
+`
+
+export const CardTitle = styled.h2`
+  font-size: 26px;
 `
