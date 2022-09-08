@@ -15,7 +15,9 @@ export const Input = styled.input`
   margin: 0 auto;
   width: 350px;
   height: 50px;
-  background-color: #1f2a37;
+  backdrop-filter: blur(7px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.6);
   border: 1px solid #4b5663;
   color: #fff;
   border-radius: 5px;
