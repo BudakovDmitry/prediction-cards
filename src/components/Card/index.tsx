@@ -1,7 +1,6 @@
 import * as Styled from 'src/components/Card/styles'
 
-const Card = ({id, title, description, handleViewCard}) => {
-
+const Card = ({ id, title, description, handleViewCard }) => {
   return (
     <>
       <Styled.Card>

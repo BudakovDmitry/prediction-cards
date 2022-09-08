@@ -24,14 +24,14 @@ export const Input = styled.input`
   margin-top: 50px;
   padding-left: 10px;
   font-size: 30px;
-  &::-webkit-inner-spin-button{
+  ::-webkit-inner-spin-button{
     -webkit-appearance: none;
     margin: 0;
   }
-  &:focus{
+  :focus{
     border: 1px solid red;
   };
-  &:active{
+  :active{
     border: 1px solid red;
   }
 `

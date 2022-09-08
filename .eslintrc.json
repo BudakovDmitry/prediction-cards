@@ -1,9 +1,28 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["eslint:recommended", "airbnb", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "JSX": true,
+    "NodeJS": true
+  },
   "plugins": ["prettier"],
   "rules": {
     "no-shadow": "off",
-    "react/function-component-definition": ["off"],
     "react/prop-types": ["off"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "no-confusing-arrow": "off",
@@ -22,7 +41,6 @@
     "spaced-comment": "off",
     "no-plusplus": "off",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "off",
     "class-methods-use-this": "off",
     "react/jsx-props-no-spreading": "off",
     "no-param-reassign": "off",
@@ -40,14 +58,10 @@
     "react/require-default-props": "off",
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/no-autofocus": "off",
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "import/first": "warn",
-    "import/newline-after-import": "warn",
-    "import/no-duplicates": "warn",
-    "newline-before-return": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": [
-      "warn",
+      "error",
       {
         "groups": [
           ["^react", "^@?\\w"],
@@ -58,6 +72,22 @@
           ["^(@|components | utils | pages | types)(/.*|$)"]
         ]
       }
-    ]
+    ],
+
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "newline-before-return": "error",
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-var": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "unnamedComponents": "arrow-function",
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-max-props-per-line": [1, { "maximum": 1, "when": "multiline" }]
   }
 }
