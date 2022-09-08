@@ -2,18 +2,178 @@
   "cards": [
     {
       "id": 1,
-      "title": "title",
-      "description": "description"
+      "title": "Шлюб",
+      "description": "Шлюб - це союз двох душ, котрі об'єднуються любов'ю. взаємною повагою та відданістю один одному. Він уособлює ваше бажання з часом поглибити любов, що виникла. День весілля - найкращий доказ вашої всепоглинаючої віри через це велике почуття. Не переставайте вдихати життя у свою віру та любов."
     },
     {
       "id": 2,
-      "title": "title2",
-      "description": "description2"
+      "title": "Будьте чесні перед самими собою",
+      "description": "Загляньте в своє серце - і зрозумієте істинний сенс ситуації, що склалася. Буде краще, якщо ви подивіться правді у вічі, і тоді ми підтримаємо вас і допоможемо здійснити всі необхідні зміни. Черпайте в нас мужність і силу, потрібні вам для того, щоб подбати про себе. Зосередьтеся на своїх щирих бажаннях, і вони прилетять у ваше життя на крилах ангелів."
     },
     {
       "id": 3,
-      "title": "title3",
+      "title": "Поверніться на землю",
+      "description": "Переставши відчувати потреби свого тіла та реалії навколишнього світу, ви відірветесь від землі. Хоча витати в хмарах приємно, ваша увага та ваша робота потрібні землі. Ми допомагаємо вам підтримувати баланс між духовним і матеріальним початком, щоб ви могли насолоджуватися повноцінним земним життям."
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 3,
+      "title": "Поверніться на землю",
       "description": "description3"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 3,
+      "title": "Поверніться на землю",
+      "description": "description3"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 3,
+      "title": "Поверніться на землю",
+      "description": "description3"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 3,
+      "title": "Поверніться на землю",
+      "description": "description3"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
+    },
+    {
+      "id": 4,
+      "title": "title4",
+      "description": "description4"
+    },
+    {
+      "id": 5,
+      "title": "title5",
+      "description": "description5"
     },
     {
       "id": 4,
