@@ -1,6 +1,6 @@
 import * as Styled from 'src/components/Card/styles'
 
-const Card = ({ id, title, description, handleViewCard }) => {
+const Card = ({ id, title, description, handleViewCard, setActiveModal }) => {
   return (
     <>
       <Styled.Card>
@@ -8,7 +8,7 @@ const Card = ({ id, title, description, handleViewCard }) => {
         <Styled.CardTitle>{title}</Styled.CardTitle>
         <p>{description}</p>
       </Styled.Card>
-      <Styled.Button onClick={handleViewCard}>Закрыть</Styled.Button>
+      <Styled.Button onClick={setActiveModal}>Закрыть</Styled.Button>
     </>
   )
 }

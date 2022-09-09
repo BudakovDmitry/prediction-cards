@@ -1,17 +1,17 @@
-import { useRightField } from 'src/components/RightField/useRightField';
-import * as Styled from 'src/components/RightField/styles';
-import Loader from 'src/components/Loader';
-import Card from 'src/components/Card';
+import { useRightField } from 'src/components/RightField/useRightField'
+import * as Styled from 'src/components/RightField/styles'
+import Loader from 'src/components/Loader'
+import Card from 'src/components/Card'
 
-const RightField = () => {
+const RightField = ({ setActiveModal }) => {
   const {
     randomNumber,
     getRandomNumber,
     loading,
     handleViewCard,
     card,
-    viewCard
-  } = useRightField();
+    viewCard,
+  } = useRightField()
 
   return (
     <Styled.RightFieldContainer>
@@ -21,6 +21,7 @@ const RightField = () => {
           title={card.title}
           description={card.description}
           handleViewCard={handleViewCard}
+          setActiveModal={setActiveModal}
         />
       ) : (
         <>
@@ -42,7 +43,7 @@ const RightField = () => {
         </>
       )}
     </Styled.RightFieldContainer>
-  );
-};
+  )
+}
 
-export default RightField;
+export default RightField

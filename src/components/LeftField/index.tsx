@@ -4,7 +4,7 @@ import { useLeftField } from 'src/components/LeftField/useLeftField'
 import Loader from 'src/components/Loader'
 import Form from 'src/components/Form'
 
-const LeftField = () => {
+const LeftField = ({ setActiveModal }) => {
   const { viewCard, handleViewCard, loading, card } = useLeftField()
 
   return (
@@ -19,6 +19,7 @@ const LeftField = () => {
               title={card.title}
               description={card.description}
               handleViewCard={handleViewCard}
+              setActiveModal={setActiveModal}
             />
           ) : (
             <Form handleViewCard={handleViewCard} />

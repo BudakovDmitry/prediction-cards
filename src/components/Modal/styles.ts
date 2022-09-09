@@ -12,7 +12,7 @@ export const ModalContainer = styled.div`
   justify-content: center;
   opacity: ${props => props.active ? '1' : '0'};
   pointer-events: ${props => props.active ? 'all' : 'none'};
-  transition: 0.6s;
+  transition: 0.6s all;
 `
 
 export const ModalContent = styled.div`
@@ -21,14 +21,6 @@ export const ModalContent = styled.div`
   background-color: #ffffff;
   width: 85%;
   height: 85%;
-  transition: 0.4s;
-  transform: ${props => props.active ? 'scale(1)' : 'scale(0)'}
-`
-
-export const ModalCloseButton = styled.button`
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
+  transform: ${props => props.active ? 'scale(1)' : 'scale(0)'};
+  transition: 0.4s all;
 `

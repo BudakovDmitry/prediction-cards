@@ -3,16 +3,27 @@ import RightField from 'src/components/RightField'
 import * as Styled from 'src/app/styles'
 import Modal from 'src/components/Modal'
 import { useState } from 'react'
+import WelcomeModal from 'src/components/WelcomeModal'
+import FinishModal from 'src/components/FinishModal'
 
 const App = () => {
   const [modalActive, setModalActive] = useState(true)
+  const [finishModalActive, setFinishModalActive] = useState(false)
+
+  if (finishModalActive) {
+    return (
+      <Modal active={finishModalActive} setActive={setFinishModalActive}>
+        <FinishModal />
+      </Modal>
+    )
+  }
 
   return (
     <Styled.HomeContainer>
-      <LeftField />
-      <RightField />
+      <LeftField setActiveModal={setFinishModalActive} />
+      <RightField setActiveModal={setFinishModalActive} />
       <Modal active={modalActive} setActive={setModalActive}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <WelcomeModal setActive={setModalActive} />
       </Modal>
     </Styled.HomeContainer>
   )
