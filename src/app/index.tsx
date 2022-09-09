@@ -12,7 +12,7 @@ const App = () => {
 
   if (finishModalActive) {
     return (
-      <Modal active={finishModalActive} setActive={setFinishModalActive}>
+      <Modal active={finishModalActive}>
         <FinishModal />
       </Modal>
     )

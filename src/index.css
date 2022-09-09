@@ -83,6 +83,7 @@ body {
   margin: 0;
   color: var(--text);
   line-height: 2;
+  padding: 0 50px;
 }
 .text-modal .text-modal__link {
   display: inline-block;
