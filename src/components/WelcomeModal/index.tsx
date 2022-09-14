@@ -8,8 +8,8 @@ const WelcomeModal = ({ setActive }) => {
       <Styled.AboutMe>
         <Styled.Photo src={Photo} />
         <Styled.DescriptionMe>
-          Привіт! Для тих хто не знайом зі мною, я - ведуча трансформаційних
-          ігор
+          Привіт! Для тих хто не знайомий зі мною, я - ведуча трансформаційних
+          ігор.
         </Styled.DescriptionMe>
       </Styled.AboutMe>
       <Styled.WelcomeModalDescription>

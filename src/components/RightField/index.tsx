@@ -25,7 +25,7 @@ const RightField = ({ setActiveModal }) => {
         />
       ) : (
         <>
-          <Styled.HeaderText>Доверь свою судьбу случайности!</Styled.HeaderText>
+          <Styled.HeaderText>Довір свою долю випадковості!</Styled.HeaderText>
           <Styled.NumberContainer>
             {loading ? (
               <Loader color="#ffffff" />
@@ -35,10 +35,10 @@ const RightField = ({ setActiveModal }) => {
           </Styled.NumberContainer>
           {randomNumber ? (
             <Styled.Button onClick={handleViewCard}>
-              Открыть карту
+              Відкрити карту
             </Styled.Button>
           ) : (
-            <Styled.Button onClick={getRandomNumber}>Нажимай</Styled.Button>
+            <Styled.Button onClick={getRandomNumber}>Натискай</Styled.Button>
           )}
         </>
       )}

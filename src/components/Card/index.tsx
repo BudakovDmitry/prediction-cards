@@ -8,7 +8,7 @@ const Card = ({ id, title, description, handleViewCard, setActiveModal }) => {
         <Styled.CardTitle>{title}</Styled.CardTitle>
         <p>{description}</p>
       </Styled.Card>
-      <Styled.Button onClick={setActiveModal}>Закрыть</Styled.Button>
+      <Styled.Button onClick={setActiveModal}>Закрити</Styled.Button>
     </>
   )
 }
