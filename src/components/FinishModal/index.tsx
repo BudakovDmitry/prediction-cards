@@ -1,7 +1,9 @@
+import { useFinishModal } from 'src/components/FinishModal/useFinishModal'
 import * as Styled from 'src/components/FinishModal/styles'
-import copy from 'copy-to-clipboard'
 
 const FinishModal = () => {
+  const { copyToClipboard, copyLink } = useFinishModal()
+
   return (
     <Styled.WelcomeModalContainer>
       <Styled.FinishModalHeader>
@@ -24,7 +26,7 @@ const FinishModal = () => {
         , там я розповідаю про свої ігри, або можеш одразу записатися на одну з
         них, написавши мені в
         <a
-          href="https://t.me/BudakovDmitry"
+          href="https://t.me/budakova_daria"
           target="_blank"
           className="text-modal__link"
         >
@@ -49,7 +51,7 @@ const FinishModal = () => {
         <a
           onClick={event => {
             event.preventDefault()
-            copy('text')
+            copyLink()
           }}
           className="text-modal__link"
         >
@@ -60,6 +62,7 @@ const FinishModal = () => {
         </a>
         посиланням!
       </Styled.FinishModalDescription>
+      {copyToClipboard && <Styled.CopiedText>Скопійовано</Styled.CopiedText>}
       <Styled.FinishModalFooter>
         Та й до зустрічі, на іграх!
       </Styled.FinishModalFooter>

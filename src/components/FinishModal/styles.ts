@@ -7,14 +7,22 @@ export const WelcomeModalContainer = styled.div`
   align-items: center;
 `
 
-export const FinishModalHeader= styled.h2`
+export const FinishModalHeader = styled.h2`
   margin: 40px 0 50px 0;
 `
 
-export const FinishModalDescription= styled.p`
+export const FinishModalDescription = styled.p`
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 `
 
-export const FinishModalFooter= styled.h3`
+export const FinishModalFooter = styled.h3`
+`
+
+export const CopiedText = styled.span`
+  text-style: italic;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  color: grey;
 `
