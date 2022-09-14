@@ -1,6 +1,6 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
@@ -10,7 +10,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
@@ -18,35 +18,42 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: './'
-            }
+              publicPath: './',
+            },
           },
-          'css-loader'
-        ]
-      }
-    ]
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext][query]',
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './index.html' }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
+      filename: '[name].css',
+    }),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.png'],
     alias: {
-      src: path.resolve('./src')
-    }
+      src: path.resolve('./src'),
+    },
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js'
+    filename: 'index.js',
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public')
+      directory: path.join(__dirname, 'public'),
     },
     compress: true,
-    port: 3000
-  }
-};
+    port: 3000,
+  },
+}
