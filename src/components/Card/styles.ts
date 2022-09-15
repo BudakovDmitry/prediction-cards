@@ -9,6 +9,14 @@ export const Card = styled.div`
   margin-top: 50px;
   padding: 5px 10px;
   text-align: center;
+  @media screen and (max-width: 430px) {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    overflow-y: auto;
+    padding: 10px 10px;
+  }
 `
 
 export const Button = styled.button.attrs({
@@ -28,13 +36,21 @@ export const Button = styled.button.attrs({
   &:hover{
     background-color: #236130; 
   }
+  @media screen and (max-width: 430px) {
+    width: 256px;
+  }
 `
 
 export const CardNumber = styled.h3`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 `
 
 export const CardTitle = styled.h2`
-  font-size: 26px;
+  font-size: 20px;
+`
+
+export const CardDescription = styled.p`
+  font-size: 18px;
+
 `

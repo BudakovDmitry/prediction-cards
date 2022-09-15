@@ -16,6 +16,11 @@ export const WelcomeModalDescription = styled.p`
   padding: 0 50px;
   font-size: 20px;
   margin-bottom: 50px;
+  @media screen and (max-width: 430px) {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  }
 `
 
 export const AboutMe = styled.div`
@@ -27,17 +32,31 @@ export const AboutMe = styled.div`
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  @media screen and (max-width: 430px) {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
 `
 
 export const Photo = styled.img`
   display: block;
   width: 125px;
   margin-right: 30px;
+  @media screen and (max-width: 430px) {
+    margin: 0;
+    padding-top: 10px;
+  }
 `
 
 export const DescriptionMe = styled.h3`
   font-style: italic;
   line-height: 1.5;
+  @media screen and (max-width: 430px) {
+    margin: 0;
+    padding: 0;
+  }
 `
 
 export const Instruction = styled.ul`
@@ -45,6 +64,10 @@ export const Instruction = styled.ul`
   font-size: 16px;
   text-align: start;
   margin: 10px 0 0 0;
+  @media screen and (max-width: 430px) {
+    margin: 0;
+    padding: 10px 20px;
+  }
 `
 
 export const InstructionItem = styled.li`

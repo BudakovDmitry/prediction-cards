@@ -3,7 +3,7 @@ import * as Styled from 'src/components/Modal/styles'
 type ModalProps = {
   active: boolean
   setActive?: (active: boolean) => void
-  children: JSX.Element
+  children: JSX.Element | null
 }
 
 const Modal = ({ active, setActive = () => {}, children }: ModalProps) => {

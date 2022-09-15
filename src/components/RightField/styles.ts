@@ -10,6 +10,12 @@ export const RightFieldContainer = styled.div`
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   text-align: center;
+  @media screen and (max-width: 430px) {
+    width: 90%;
+    margin: 0 auto;
+    height: 500px;
+    margin-bottom: 30px;
+  }
 `
 
 export const Button = styled.button`
@@ -25,6 +31,9 @@ export const Button = styled.button`
   &:hover{
     background-color: #236130; 
   }
+  @media screen and (max-width: 430px) {
+    width: 256px;
+  }
 `
 
 export const HeaderText = styled.h2`
@@ -35,6 +44,10 @@ export const HeaderText = styled.h2`
   color: #ffffff;
   line-height: 2;
   font-size: 30px;
+  @media screen and (max-width: 430px) {
+    font-size: 20px;
+    width: 250px;
+  }
 `
 
 export const NumberContainer = styled.div`

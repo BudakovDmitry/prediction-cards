@@ -6,25 +6,26 @@ import { useState } from 'react'
 import WelcomeModal from 'src/components/WelcomeModal'
 import FinishModal from 'src/components/FinishModal'
 
-const App = () => {
-  const [modalActive, setModalActive] = useState(true)
-  const [finishModalActive, setFinishModalActive] = useState(false)
+const ArrowIcon = require('../images/arrow-down-icon.png')
 
-  if (finishModalActive) {
-    return (
-      <Modal active={finishModalActive}>
-        <FinishModal />
-      </Modal>
-    )
-  }
+const App = () => {
+  const [modalActive, setModalActive] = useState<boolean>(true)
+  const [finishModalActive, setFinishModalActive] = useState<boolean>(false)
 
   return (
     <Styled.HomeContainer>
       <LeftField setActiveModal={setFinishModalActive} />
+      <Styled.ArrowIcon src={ArrowIcon} />
       <RightField setActiveModal={setFinishModalActive} />
-      <Modal active={modalActive} setActive={setModalActive}>
-        <WelcomeModal setActive={setModalActive} />
-      </Modal>
+      {modalActive ? (
+        <Modal active={modalActive} setActive={setModalActive}>
+          <WelcomeModal setActive={setModalActive} />
+        </Modal>
+      ) : finishModalActive ? (
+        <Modal active={finishModalActive}>
+          <FinishModal />
+        </Modal>
+      ) : null}
     </Styled.HomeContainer>
   )
 }

@@ -8,6 +8,10 @@ export const HeaderText = styled.h2`
   line-height: 2;
   font-size: 30px;
   text-align: center;
+  @media screen and (max-width: 430px) {
+    font-size: 20px;
+    width: 250px;
+  }
 `
 
 export const Input = styled.input`
@@ -29,10 +33,13 @@ export const Input = styled.input`
     margin: 0;
   }
   :focus{
-    border: 1px solid red;
+    border: 1px solid yellow;
   };
   :active{
-    border: 1px solid red;
+    border: 1px solid yellow;
+  }
+  @media screen and (max-width: 430px) {
+    width: 250px;
   }
 `
 
@@ -53,6 +60,9 @@ export const Button = styled.button.attrs({
   &:hover{
     background-color: #236130; 
   }
+  @media screen and (max-width: 430px) {
+    width: 256px;
+  }
 `
 
 export const Form = styled.form`
@@ -65,4 +75,7 @@ export const ErrorText = styled.p`
   padding: 5px 0 0 0;
   color: red;
   font-size: 12px;
+  @media screen and (max-width: 430px) {
+    width: 256px;
+  }
 `

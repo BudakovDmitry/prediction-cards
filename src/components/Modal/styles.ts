@@ -23,4 +23,9 @@ export const ModalContent = styled.div`
   height: 85%;
   transform: ${props => props.active ? 'scale(1)' : 'scale(0)'};
   transition: 0.4s all;
+  @media screen and (max-width: 430px) {
+    width: 90%;
+    overflow-y: auto;
+    padding: 30px 10px;
+  }
 `

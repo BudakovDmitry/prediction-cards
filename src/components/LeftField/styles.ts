@@ -9,6 +9,13 @@ export const LeftFieldContainer = styled.div`
   background-color: rgba(17, 25, 40, 0.6);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  @media screen and (max-width: 430px) {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    height: 500px;
+  }
 `
 
 export const Button = styled.button.attrs({
@@ -25,5 +32,8 @@ export const Button = styled.button.attrs({
   margin-top: 45px;
   &:hover{
     background-color: #236130; 
+  }
+  @media screen and (max-width: 430px) {
+    width: 90%;
   }
 `
