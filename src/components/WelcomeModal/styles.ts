@@ -63,7 +63,8 @@ export const Instruction = styled.ul`
   font-style: italic;
   font-size: 16px;
   text-align: start;
-  margin: 10px 0 0 0;
+  margin: 10px 0 20px 0;
+  line-height: 2;
   @media screen and (max-width: 430px) {
     margin: 0;
     padding: 10px 20px;
