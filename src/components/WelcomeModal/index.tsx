@@ -1,6 +1,6 @@
 import * as Styled from 'src/components/WelcomeModal/styles'
 
-const Photo = require('../../images/photo.png')
+const Photo = require('../../images/photo.jpg')
 
 const WelcomeModal = ({ setActive }) => {
   return (
