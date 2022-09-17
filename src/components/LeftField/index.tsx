@@ -4,11 +4,11 @@ import { useLeftField } from 'src/components/LeftField/useLeftField'
 import Loader from 'src/components/Loader'
 import Form from 'src/components/Form'
 
-const LeftField = ({ setActiveModal }) => {
+const LeftField = ({ setActiveModal, disabled, setDisabledOppositeField }) => {
   const { viewCard, handleViewCard, loading, card } = useLeftField()
 
   return (
-    <Styled.LeftFieldContainer>
+    <Styled.LeftFieldContainer disabled={disabled}>
       {loading ? (
         <Loader color="#ffffff" />
       ) : (
@@ -22,7 +22,10 @@ const LeftField = ({ setActiveModal }) => {
               setActiveModal={setActiveModal}
             />
           ) : (
-            <Form handleViewCard={handleViewCard} />
+            <Form
+              handleViewCard={handleViewCard}
+              setDisabledOppositeField={setDisabledOppositeField}
+            />
           )}
         </>
       )}

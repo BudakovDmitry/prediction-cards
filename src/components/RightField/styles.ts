@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { RightFieldContainerProps } from 'src/components/RightField/types'
 
-export const RightFieldContainer = styled.div`
+export const RightFieldContainer = styled.div<RightFieldContainerProps>`
   margin: 20px 0;
   width: 500px;
   height: 550px;
@@ -10,6 +11,9 @@ export const RightFieldContainer = styled.div`
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   text-align: center;
+  pointer-events: ${props => props.disabled ? 'none' : 'auto'};
+  opacity: ${props => props.disabled ? '0.5' : '1'};
+  transition: opacity 0.5s;
   @media screen and (max-width: 430px) {
     width: 90%;
     margin: 0 auto;

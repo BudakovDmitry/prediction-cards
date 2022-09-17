@@ -2,7 +2,7 @@ import * as Styled from 'src/components/Form/styles'
 import { useForm } from 'react-hook-form'
 import { ReactNode } from 'react'
 
-const Form = ({ handleViewCard }) => {
+const Form = ({ handleViewCard, setDisabledOppositeField }) => {
   const {
     register,
     formState: { errors },
@@ -28,7 +28,9 @@ const Form = ({ handleViewCard }) => {
             {errors.luckyNumber.message as ReactNode}
           </Styled.ErrorText>
         )}
-        <Styled.Button>Хочу знать!</Styled.Button>
+        <Styled.Button onClick={() => setDisabledOppositeField(true)}>
+          Хочу знать!
+        </Styled.Button>
       </Styled.Form>
     </>
   )

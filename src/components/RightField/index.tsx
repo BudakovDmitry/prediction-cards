@@ -3,7 +3,7 @@ import * as Styled from 'src/components/RightField/styles'
 import Loader from 'src/components/Loader'
 import Card from 'src/components/Card'
 
-const RightField = ({ setActiveModal }) => {
+const RightField = ({ setActiveModal, disabled, setDisabledOppositeField }) => {
   const {
     randomNumber,
     getRandomNumber,
@@ -14,7 +14,7 @@ const RightField = ({ setActiveModal }) => {
   } = useRightField()
 
   return (
-    <Styled.RightFieldContainer>
+    <Styled.RightFieldContainer disabled={disabled}>
       {viewCard ? (
         <Card
           id={card.id}
@@ -38,7 +38,14 @@ const RightField = ({ setActiveModal }) => {
               Відкрити карту
             </Styled.Button>
           ) : (
-            <Styled.Button onClick={getRandomNumber}>Натискай</Styled.Button>
+            <Styled.Button
+              onClick={() => {
+                getRandomNumber()
+                setDisabledOppositeField(true)
+              }}
+            >
+              Натискай
+            </Styled.Button>
           )}
         </>
       )}

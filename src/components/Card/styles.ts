@@ -9,6 +9,7 @@ export const Card = styled.div`
   margin-top: 50px;
   padding: 5px 10px;
   text-align: center;
+  overflow-y: auto;
   @media screen and (max-width: 430px) {
     width: 80%;
     margin: 0 auto;
@@ -52,5 +53,5 @@ export const CardTitle = styled.h2`
 
 export const CardDescription = styled.p`
   font-size: 18px;
-
+  height: 100%;
 `
