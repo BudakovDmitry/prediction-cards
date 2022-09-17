@@ -9,8 +9,7 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.2",
