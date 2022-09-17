@@ -1,17 +1,19 @@
 import { useState } from 'react'
 import json from 'src/json/cards.json'
+import { CardType } from 'src/types'
+import { SubmitHandler, FieldValues } from 'react-hook-form'
 
 export const useLeftField = () => {
   const [viewCard, setViewCard] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
-  const [ card, setCard ] = useState({
+  const [ card, setCard ] = useState<CardType>({
     id: 0,
     title: '',
     description: ''
   })
 
-  const handleViewCard = (card?: any): void => {
-    viewCard ? setViewCard(false) : openCard(card.luckyNumber)
+  const handleViewCard = <TFieldValues extends FieldValues>(data: TFieldValues): void => {
+    viewCard ? setViewCard(false) : openCard(data.luckyNumber)
   }
 
   const openCard = (id: number = 0) => {

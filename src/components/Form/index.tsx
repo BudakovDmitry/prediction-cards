@@ -1,8 +1,18 @@
+import { Dispatch, SetStateAction } from 'react'
 import * as Styled from 'src/components/Form/styles'
 import { useForm } from 'react-hook-form'
 import { ReactNode } from 'react'
+import { SubmitHandler, FieldValues } from 'react-hook-form'
 
-const Form = ({ handleViewCard, setDisabledOppositeField }) => {
+type FormProps = {
+  handleViewCard: SubmitHandler<FieldValues>
+  setDisabledOppositeField: Dispatch<SetStateAction<boolean>>
+}
+
+const Form = ({
+  handleViewCard = () => {},
+  setDisabledOppositeField = () => {},
+}: FormProps) => {
   const {
     register,
     formState: { errors },

@@ -1,6 +1,19 @@
+import { Dispatch, SetStateAction } from 'react'
 import * as Styled from 'src/components/Card/styles'
 
-const Card = ({ id, title, description, handleViewCard, setActiveModal }) => {
+type CardProps = {
+  id: number
+  title: string
+  description: string
+  setActiveModal: Dispatch<SetStateAction<boolean>>
+}
+
+const Card = ({
+  id = 0,
+  title = '',
+  description = '',
+  setActiveModal = () => {},
+}: CardProps) => {
   return (
     <>
       <Styled.Card>

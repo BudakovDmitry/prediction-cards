@@ -49,7 +49,7 @@ const FinishModal = () => {
         Так само, якщо ти вважаєш, що цей інструмент може допомогти або буде
         цікавий комусь із твоїх знайомих, просто поділися з ними
         <a
-          onClick={event => {
+          onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
             event.preventDefault()
             copyLink()
           }}

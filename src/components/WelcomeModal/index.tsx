@@ -2,7 +2,11 @@ import * as Styled from 'src/components/WelcomeModal/styles'
 
 const Photo = require('../../images/photo.jpg')
 
-const WelcomeModal = ({ setActive }) => {
+type WelcomeModalProps = {
+  setActive: (active: boolean) => void
+}
+
+const WelcomeModal = ({ setActive = () => {} }: WelcomeModalProps) => {
   return (
     <Styled.WelcomeModalContainer>
       <Styled.AboutMe>

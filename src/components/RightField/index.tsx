@@ -1,9 +1,20 @@
+import { Dispatch, SetStateAction } from 'react'
 import { useRightField } from 'src/components/RightField/useRightField'
 import * as Styled from 'src/components/RightField/styles'
 import Loader from 'src/components/Loader'
 import Card from 'src/components/Card'
 
-const RightField = ({ setActiveModal, disabled, setDisabledOppositeField }) => {
+type RightFieldProps = {
+  setActiveModal: Dispatch<SetStateAction<boolean>>
+  disabled: boolean
+  setDisabledOppositeField: Dispatch<SetStateAction<boolean>>
+}
+
+const RightField = ({
+  setActiveModal = () => {},
+  disabled = false,
+  setDisabledOppositeField = () => {},
+}: RightFieldProps) => {
   const {
     randomNumber,
     getRandomNumber,
@@ -20,7 +31,6 @@ const RightField = ({ setActiveModal, disabled, setDisabledOppositeField }) => {
           id={card.id}
           title={card.title}
           description={card.description}
-          handleViewCard={handleViewCard}
           setActiveModal={setActiveModal}
         />
       ) : (

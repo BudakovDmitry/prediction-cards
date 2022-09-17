@@ -1,11 +1,12 @@
 import { useState } from "react"
 import json from 'src/json/cards.json'
+import { CardType } from 'src/types'
 
 export const useRightField = () => {
   const [randomNumber, setRandomNumber] = useState<number | null>(null)
   const [loading, setLoading] = useState<boolean>(false)
   const [viewCard, setViewCard] = useState<boolean>(false)
-  const [ card, setCard ] = useState({
+  const [ card, setCard ] = useState<CardType>({
     id: 0,
     title: '',
     description: ''

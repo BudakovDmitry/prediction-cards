@@ -5,9 +5,9 @@ export const useFinishModal = () => {
 
   const [copyToClipboard, setCopyToClipboard] = useState<boolean>(false)
 
-  const copyLink = () => {
+  const copyLink = (): void => {
     setCopyToClipboard(true)
-    copy('https://budakova_darya.com')
+    copy('https://budakovdmitry.github.io/prediction-cards/')
     setTimeout(() => {
       setCopyToClipboard(false)
     }, 1000)

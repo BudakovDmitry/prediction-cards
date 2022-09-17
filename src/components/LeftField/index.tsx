@@ -1,10 +1,21 @@
+import { Dispatch, SetStateAction } from 'react'
 import * as Styled from 'src/components/LeftField/styles'
 import Card from 'src/components/Card'
 import { useLeftField } from 'src/components/LeftField/useLeftField'
 import Loader from 'src/components/Loader'
 import Form from 'src/components/Form'
 
-const LeftField = ({ setActiveModal, disabled, setDisabledOppositeField }) => {
+type LeftFieldProps = {
+  setActiveModal: Dispatch<SetStateAction<boolean>>
+  disabled: boolean
+  setDisabledOppositeField: Dispatch<SetStateAction<boolean>>
+}
+
+const LeftField = ({
+  setActiveModal = () => {},
+  disabled = false,
+  setDisabledOppositeField = () => {},
+}: LeftFieldProps) => {
   const { viewCard, handleViewCard, loading, card } = useLeftField()
 
   return (
@@ -18,7 +29,6 @@ const LeftField = ({ setActiveModal, disabled, setDisabledOppositeField }) => {
               id={card.id}
               title={card.title}
               description={card.description}
-              handleViewCard={handleViewCard}
               setActiveModal={setActiveModal}
             />
           ) : (

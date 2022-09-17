@@ -6,10 +6,19 @@ type ModalProps = {
   children: JSX.Element | null
 }
 
-const Modal = ({ active, setActive = () => {}, children }: ModalProps) => {
+const Modal = ({
+  active = false,
+  setActive = () => {},
+  children = null,
+}: ModalProps) => {
   return (
     <Styled.ModalContainer active={active} onClick={() => setActive(false)}>
-      <Styled.ModalContent active={active} onClick={e => e.stopPropagation()}>
+      <Styled.ModalContent
+        active={active}
+        onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
+          event.stopPropagation()
+        }
+      >
         {children}
       </Styled.ModalContent>
     </Styled.ModalContainer>
